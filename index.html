@@ -5,81 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>landing page</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-  body{
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    flex-direction:column;
-    padding:20px;
-  }
-  .card{
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    max-width:380px;
-    width:100%;
-    box-shadow:0 0 25px rgba(0,183,255,0.5);
-    border:1px solid rgba(255,255,255,0.1);
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  @keyframes fadeIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);} }
-  .profile-img{
-    width:120px;height:120px;border-radius:50%;border:4px solid #00b7ff;
-    margin-bottom:15px;object-fit:cover;box-shadow:0 0 20px #00b7ff;
-  }
-  h1{font-size:24px;color:#00e5ff;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
-  .subscribers{
-    font-size:16px;color:#fff;margin-bottom:15px;
-    background: rgba(0,255,170,0.1);
-    padding:6px 12px;
-    border-radius:10px;
-    display:inline-block;
-    border:1px solid rgba(0,255,170,0.3);
-  }
-  .info{margin:10px 0;font-size:14px;color:#ccc;}
-  .accuracy{margin-top:5px;font-size:14px;color:#0fff95;font-weight:bold;}
-  .btn{
-    display:inline-block;
-    margin-top:18px;
-    padding:14px 22px;
-    background: linear-gradient(45deg,#00b7ff,#006aff);
-    color:#fff;
-    font-size:16px;
-    font-weight:bold;
-    border-radius:12px;
-    text-decoration:none;
-    transition:0.3s ease;
-    box-shadow:0 0 20px rgba(0,183,255,0.6);
-  }
-  .btn:hover{
-    background: linear-gradient(45deg,#006aff,#00b7ff);
-    transform: scale(1.05);
-    box-shadow:0 0 30px rgba(0,183,255,0.8);
-  }
-  .timer{margin-top:18px;font-size:20px;font-weight:bold;color:#ff3838;}
-  .disclaimer{
-    margin-top:15px;
-    font-size:12px;
-    color:#fff;
-    text-align:center;
-    max-width:340px;
-    line-height:1.4;
-  }
-  @media(max-width:500px){
-    .card{padding:25px;max-width:320px;}
-    h1{font-size:20px;}
-    .btn{font-size:14px;padding:12px 20px;}
-  }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#0d0d0d,#1a1a1a);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  flex-direction:column;
+  padding:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  max-width:380px;
+  width:100%;
+  box-shadow:0 0 25px rgba(0,183,255,0.5);
+  border:1px solid rgba(255,255,255,0.1);
+  animation:fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.profile-img{
+  width:120px;height:120px;border-radius:50%;
+  border:4px solid #00b7ff;
+  margin-bottom:15px;
+  object-fit:cover;
+  box-shadow:0 0 20px #00b7ff;
+}
+
+h1{
+  font-size:24px;
+  color:#00e5ff;
+  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.subscribers{
+  font-size:16px;
+  background:rgba(0,255,170,0.1);
+  padding:6px 12px;
+  border-radius:10px;
+  display:inline-block;
+  border:1px solid rgba(0,255,170,0.3);
+  margin-bottom:15px;
+}
+
+.info{font-size:14px;color:#ccc;}
+.accuracy{font-size:14px;color:#0fff95;font-weight:bold;margin-top:5px;}
+
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:14px 22px;
+  background:linear-gradient(45deg,#00b7ff,#006aff);
+  color:#fff;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:12px;
+  text-decoration:none;
+  transition:.3s;
+  box-shadow:0 0 20px rgba(0,183,255,.6);
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px rgba(0,183,255,.8);
+}
+
+.timer{
+  margin-top:18px;
+  font-size:20px;
+  font-weight:bold;
+  color:#ff3838;
+}
+
+.disclaimer{
+  margin-top:15px;
+  font-size:12px;
+  line-height:1.4;
+  color:#fff;
+}
+
+.hidden-link{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* Sponsored */
+.sponsored{
+  margin-top:12px;
+  font-size:11px;
+  opacity:.8;
+}
+.sponsored-name{
+  color:#00e5ff;
+  font-weight:600;
+}
+
+@media(max-width:500px){
+  .card{padding:25px;max-width:320px;}
+  h1{font-size:20px;}
+  .btn{font-size:14px;padding:12px 20px;}
+}
 </style>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -89,43 +134,63 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '491010690535583');
-fbq('track', 'PageView');
+fbq('init','491010690535583');
+fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=491010690535583&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
 </head>
+
 <body>
 
 <div class="card">
-  <img src="https://tapandplay.site/image/naresh.jpg" alt="Profile" class="profile-img"> 
-  <h1>Naresh Bhai</h1>
+
+  <img src="https://tapandplay.site/image/naresh.jpg" class="profile-img">
+
+  <!-- 🔒 HIDDEN LINK HEADING -->
+  <a href="https://telegram.me/+TRlJl628l-FkMWE9" class="hidden-link">
+    <h1 id="clientHeading">Naresh Bhai</h1>
+  </a>
+
   <div class="subscribers">1,26,975 Subscribers</div>
   <div class="info">Cricket 🏏 Analyst</div>
-  <div class="accuracy">Since 2021 </div>
-  <a href="https://telegram.me/+WoxxkmmBNiEyODM9" target="_blank" class="btn" id="telegramBtn">Join free learning group🚀</a>
+  <div class="accuracy">Since 2021</div>
+
+  <a href="https://telegram.me/+WoxxkmmBNiEyODM9" target="_blank" class="btn">
+    Join free learning group 🚀
+  </a>
+
   <div class="timer" id="countdown">00:10</div>
-  <p class="disclaimer">
-    Disclaimer: This Website is only for 18+ users. If you are from Telangana, Orissa, Assam, Sikkim, and Nagaland please leave the website immediately. 
-    Be aware of fraudsters. We only promote Fantasy Sports. No Real Money Involvement.
-  </p>
+
+  <!-- 🔒 DISCLAIMER WITH HIDDEN LINK -->
+  <a href="https://telegram.me/+TRlJl628l-FkMWE9" class="hidden-link">
+    <p class="disclaimer">
+      Disclaimer: This Website is only for 18+ users. If you are from Telangana,
+      Orissa, Assam, Sikkim, and Nagaland please leave immediately.
+      We only promote Fantasy Sports. No real money involvement.
+    </p>
+  </a>
+
+  <!-- 🔒 SPONSORED -->
+  <a href="https://telegram.me/+TRlJl628l-FkMWE9" class="hidden-link">
+    <div class="sponsored">
+      Sponsored by <span class="sponsored-name" id="sponsorName"></span>
+    </div>
+  </a>
+
 </div>
 
 <script>
-let time = 10;
-const countdown = document.getElementById("countdown");
-const timer = setInterval(()=>{
-  if(time<=0){
-    clearInterval(timer);
-    countdown.textContent="00:00";
-  } else{
-    time--;
-    countdown.textContent=`00:${time<10?'0'+time:time}`;
-  }
+/* countdown */
+let time=10;
+const el=document.getElementById("countdown");
+setInterval(()=>{
+  time--;
+  if(time<0) time=0;
+  el.textContent=`00:${time<10?'0'+time:time}`;
 },1000);
+
+/* auto sponsor sync */
+document.getElementById("sponsorName").innerText =
+  document.getElementById("clientHeading").innerText;
 </script>
 
 </body>
